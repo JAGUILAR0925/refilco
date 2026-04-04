@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REFILCO — Filamento PET Reciclado Colombiano</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #1a7a4a;
+    --verde-claro: #2dbe73;
+    --crema: #f5f0e8;
+    --negro: #0f0f0f;
+    --gris: #2a2a2a;
+    --acento: #e8ff5a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--negro);
+    color: var(--crema);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 50%, rgba(26,122,74,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(45,190,115,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Noise texture overlay */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 48px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    color: var(--acento);
+  }
+
+  .logo span {
+    color: var(--verde-claro);
+  }
+
+  nav a {
+    color: var(--crema);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  nav a:hover { opacity: 1; }
+
+  .hero-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .tag-line {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .tag-line::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--verde-claro);
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    animation: fadeUp 0.9s 0.1s ease both;
+  }
+
+  h1 .highlight {
+    color: var(--acento);
+    display: block;
+  }
+
+  .hero-sub {
+    max-width: 520px;
+    margin-top: 32px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.75;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-top: 44px;
+    animation: fadeUp 1s 0.3s ease both;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--acento);
+    color: var(--negro);
+    padding: 14px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232,255,90,0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--crema);
+    padding: 14px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid rgba(245,240,232,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--crema);
+  }
+
+  .hero-footer {
+    padding: 32px 48px;
+    display: flex;
+    gap: 48px;
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid rgba(245,240,232,0.08);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+    color: var(--verde-claro);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  /* Spinning gear decoration */
+  .gear-deco {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(55vw, 620px);
+    opacity: 0.06;
+    animation: spinSlow 40s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes spinSlow {
+    to { transform: translateY(-50%) rotate(360deg); }
+  }
+
+  /* ─── PROCESO ─── */
+  .section {
+    padding: 100px 48px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--verde-claro);
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    margin-bottom: 64px;
+    max-width: 700px;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2px;
+  }
+
+  .process-step {
+    background: var(--gris);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .process-step:hover {
+    background: #333;
+  }
+
+  .process-step::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    color: rgba(245,240,232,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  .step-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    color: var(--crema);
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.6;
+  }
+
+  /* ─── VENTAJAS ─── */
+  .ventajas {
+    background: var(--verde);
+    padding: 100px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ventajas::before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    width: 500px;
+    height: 500px;
+    border: 80px solid rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+
+  .ventajas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 64px;
+  }
+
+  .ventaja-card {
+    background: rgba(0,0,0,0.2);
+    padding: 40px;
+    border-left: 3px solid var(--acento);
+    transition: background 0.3s;
+  }
+
+  .ventaja-card:hover {
+    background: rgba(0,0,0,0.35);
+  }
+
+  .ventaja-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--acento);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .ventaja-title {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .ventaja-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    opacity: 0.75;
+  }
+
+  /* ─── PRECIOS ─── */
+  .precios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    margin-top: 64px;
+  }
+
+  .precio-card {
+    background: var(--gris);
+    padding: 48px 36px;
+    position: relative;
+    transition: transform 0.2s;
+  }
+
+  .precio-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .precio-card.featured {
+    background: var(--crema);
+    color: var(--negro);
+  }
+
+  .precio-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--acento);
+    color: var(--negro);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 500;
+  }
+
+  .precio-tipo {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+
+  .precio-valor {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--verde-claro);
+    margin-bottom: 4px;
+  }
+
+  .precio-card.featured .precio-valor {
+    color: var(--verde);
+  }
+
+  .precio-unidad {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-bottom: 32px;
+  }
+
+  .precio-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .precio-features li {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    opacity: 0.8;
+    line-height: 1.4;
+  }
+
+  .precio-features li::before {
+    content: '✓';
+    color: var(--verde-claro);
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .precio-card.featured .precio-features li::before {
+    color: var(--verde);
+  }
+
+  /* ─── CTA FINAL ─── */
+  .cta-section {
+    padding: 120px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(26,122,74,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    max-width: 800px;
+    margin: 0 auto 32px;
+  }
+
+  .cta-section p {
+    max-width: 480px;
+    margin: 0 auto 44px;
+    opacity: 0.65;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* ─── FORM ─── */
+  .form-row {
+    display: flex;
+    gap: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-row input {
+    flex: 1;
+    min-width: 220px;
+    background: var(--gris);
+    border: 1px solid rgba(245,240,232,0.15);
+    color: var(--crema);
+    padding: 14px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-row input::placeholder { opacity: 0.4; }
+  .form-row input:focus { border-color: var(--verde-claro); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid rgba(245,240,232,0.08);
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 20px 24px; }
+    .hero-body { padding: 0 24px; }
+    .hero-footer { padding: 24px; gap: 28px; flex-wrap: wrap; }
+    .section { padding: 60px 24px; }
+    .ventajas { padding: 60px 24px; }
+    .ventajas-grid { grid-template-columns: 1fr; }
+    .cta-section { padding: 80px 24px; }
+    footer { padding: 24px; }
+    .gear-deco { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Decorative gear SVG -->
+  <svg class="gear-deco" viewBox="0 0 200 200" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 30 L108 10 L120 28 L140 20 L142 40 L162 42 L154 60 L170 70 L158 86 L168 102 L150 108 L152 128 L132 126 L124 144 L106 136 L96 154 L80 142 L62 152 L58 132 L38 128 L40 108 L22 100 L34 86 L24 70 L42 62 L38 42 L58 42 L62 22 L80 30 L92 12 Z"/>
+    <circle cx="100" cy="100" r="35" fill="none" stroke="white" stroke-width="8"/>
+  </svg>
+
+  <nav>
+    <div class="logo">REFIL<span>CO</span></div>
+    <a href="#contacto">Solicitar muestra</a>
+  </nav>
+
+  <div class="hero-body">
+    <div class="tag-line">Economía circular · Colombia</div>
+    <h1>
+      Filamento<br>
+      <span class="highlight">reciclado.</span>
+      Local.
+    </h1>
+    <p class="hero-sub">
+      Convertimos botellas PET colombianas en filamento de 1.75mm para impresoras FDM.
+      Hasta 40% más económico que el importado, con entrega en días, no semanas.
+    </p>
+    <div class="hero-cta">
+      <a href="#contacto" class="btn-primary">Solicitar muestra gratis</a>
+      <a href="#proceso" class="btn-secondary">Ver el proceso</a>
+    </div>
+  </div>
+
+  <div class="hero-footer">
+    <div class="stat">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">Menos costoso que importado</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">1.75mm</span>
+      <span class="stat-label">Diámetro estándar FDM</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Residuos al proceso</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3–5</span>
+      <span class="stat-label">Días de entrega</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section" id="proceso">
+  <div class="section-label">Cómo funciona</div>
+  <h2 class="section-title">Del plástico<br>al filamento</h2>
+
+  <div class="process-grid">
+    <div class="process-step fade-in" data-num="01">
+      <div class="step-icon">🫙</div>
+      <div class="step-title">Recolección</div>
+      <p class="step-desc">Botellas PET (#1) recolectadas localmente en Colombia. Sin intermediarios, sin importaciones. Trazabilidad completa del origen.</p>
+    </div>
+    <div class="process-step fade-in" data-num="02">
+      <div class="step-icon">✂️</div>
+      <div class="step-title">Corte en tira</div>
+      <p class="step-desc">Cortador de precisión con rodamientos apilados convierte cada botella en una tira helicoidal continua de ancho uniforme.</p>
+    </div>
+    <div class="process-step fade-in" data-num="03">
+      <div class="step-icon">🌡️</div>
+      <div class="step-title">Termoformado</div>
+      <p class="step-desc">La tira PET pasa a ~230°C por una boquilla de latón de 1.75mm que la transforma en filamento cilíndrico uniforme.</p>
+    </div>
+    <div class="process-step fade-in" data-num="04">
+      <div class="step-icon">🎯</div>
+      <div class="step-title">Bobinado y control</div>
+      <p class="step-desc">Sistema motorizado de bobinado con calibración continua de diámetro. Cada lote es medido antes del despacho.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VENTAJAS -->
+<section class="ventajas" id="ventajas">
+  <div class="section-label" style="color:var(--acento)">Por qué elegirnos</div>
+  <h2 class="section-title" style="color:var(--crema)">Ventajas que<br>ningún importador<br>puede darte</h2>
+
+  <div class="ventajas-grid">
+    <div class="ventaja-card fade-in">
+      <div class="ventaja-num">55K</div>
+      <div class="ventaja-title">Precio COP/kg</div>
+      <p class="ventaja-desc">Frente a $85.000–100.000 del filamento importado. Mismo diámetro, misma compatibilidad, sin aranceles ni fletes internacionales.</p>
+    </div>
+    <div class="ventaja-card fade-in">
+      <div class="ventaja-num">100%</div>
+      <div class="ventaja-title">Origen trazable</div>
+      <p class="ventaja-desc">Cada bobina lleva registro de la ciudad de recolección. Ideal para reportes de sostenibilidad, proyectos ESG y certificaciones ambientales.</p>
+    </div>
+    <div class="ventaja-card fade-in">
+      <div class="ventaja-num">3–5</div>
+      <div class="ventaja-title">Días de entrega</div>
+      <p class="ventaja-desc">Sin esperar semanas de importación desde China. Pedidos urgentes atendidos con stock disponible en Colombia.</p>
+    </div>
+    <div class="ventaja-card fade-in">
+      <div class="ventaja-num">∞</div>
+      <div class="ventaja-title">Soporte técnico local</div>
+      <p class="ventaja-desc">Asesoría en perfiles de impresión, temperatura y configuración para PETG reciclado. En español, en tu zona horaria, sin chatbots.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="section" id="precios">
+  <div class="section-label">Planes</div>
+  <h2 class="section-title">Precios directos,<br>sin sorpresas</h2>
+
+  <div class="precios-grid">
+    <div class="precio-card fade-in">
+      <div class="precio-tipo">Maker / Particular</div>
+      <div class="precio-valor">$60K</div>
+      <div class="precio-unidad">COP por kilogramo</div>
+      <ul class="precio-features">
+        <li>Filamento PETG reciclado 1.75mm</li>
+        <li>Mínimo 500g por pedido</li>
+        <li>Entrega en 3–5 días hábiles</li>
+        <li>Guía de perfiles de impresión</li>
+      </ul>
+    </div>
+    <div class="precio-card featured fade-in">
+      <div class="precio-badge">Más elegido</div>
+      <div class="precio-tipo">Institucional / B2B</div>
+      <div class="precio-valor">$55K</div>
+      <div class="precio-unidad">COP por kg — pedidos desde 3kg</div>
+      <ul class="precio-features">
+        <li>Facturación electrónica incluida</li>
+        <li>Certificado de origen reciclado</li>
+        <li>200g de muestra gratuita primer pedido</li>
+        <li>Soporte técnico prioritario</li>
+        <li>Acuerdo de suministro mensual</li>
+      </ul>
+    </div>
+    <div class="precio-card fade-in">
+      <div class="precio-tipo">Kit Polyformer</div>
+      <div class="precio-valor">$600K</div>
+      <div class="precio-unidad">COP — kit armado y calibrado</div>
+      <ul class="precio-features">
+        <li>Máquina completa lista para usar</li>
+        <li>Taller de capacitación incluido (3h)</li>
+        <li>Produce tu propio filamento in-house</li>
+        <li>ROI en menos de 2 meses</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="contacto">
+  <div class="section-label" style="justify-content:center">Empecemos</div>
+  <h2>Solicita tu<br><span style="color:var(--verde-claro)">muestra gratis</span></h2>
+  <p>200g sin costo para que evalúes la calidad directamente en tus equipos. Sin compromisos, con retroalimentación de tu parte.</p>
+
+  <div class="form-row">
+    <input type="email" placeholder="Tu correo institucional">
+    <button class="btn-primary" onclick="handleSubmit()">Solicitar ahora →</button>
+  </div>
+
+  <p style="margin-top:20px; font-size:0.8rem; opacity:0.4;">
+    O escríbenos directamente · Solo FabLabs, universidades y colegios técnicos en Colombia
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo" style="font-size:1.2rem">REFIL<span style="color:var(--verde-claro)">CO</span></div>
+  <span>Filamento PET reciclado · Hecho en Colombia</span>
+  <span>© 2025</span>
+</footer>
+
+<script>
+  // Intersection Observer para animaciones de entrada
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleSubmit() {
+    const input = document.querySelector('.form-row input');
+    const val = input.value.trim();
+    if (!val || !val.includes('@')) {
+      input.style.borderColor = '#ff5a5a';
+      setTimeout(() => input.style.borderColor = '', 1500);
+      return;
+    }
+    input.value = '';
+    const btn = document.querySelector('.form-row .btn-primary');
+    const original = btn.textContent;
+    btn.textContent = '¡Listo! Te contactamos pronto ✓';
+    btn.style.background = 'var(--verde-claro)';
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+    }, 3500);
+  }
+</script>
+
+</body>
+</html>
