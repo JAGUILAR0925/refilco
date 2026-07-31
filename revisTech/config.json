@@ -1,0 +1,155 @@
+{
+  "project": {
+    "name": "RevisTech",
+    "description": "Revista digital de tecnología, software, nube, IA y ciberseguridad",
+    "version": "1.0.0",
+    "created": "2026-07-31",
+    "frequency": "monthly"
+  },
+  "design": {
+    "pageWidth": 900,
+    "pageHeight": "100vh",
+    "totalPages": 10,
+    "colors": {
+      "bgPrimary": "#0F172A",
+      "bgSecondary": "#1E293B",
+      "textPrimary": "#F0F7FF",
+      "textSecondary": "#94A3B8",
+      "accentPrimary": "#00D9FF",
+      "accentSecondary": "#8B5CF6",
+      "accentDanger": "#FF6B6B",
+      "border": "#334155"
+    },
+    "typography": {
+      "display": "Space Grotesk",
+      "body": "Inter",
+      "mono": "IBM Plex Mono"
+    }
+  },
+  "sections": [
+    {
+      "id": 1,
+      "name": "Tecnología",
+      "slug": "tecnologia",
+      "topics": [
+        "Computación Cuántica",
+        "Semiconductores",
+        "5G/6G",
+        "Edge Computing"
+      ],
+      "articlesPerSection": 4
+    },
+    {
+      "id": 2,
+      "name": "Desarrollo de Software",
+      "slug": "desarrollo",
+      "topics": [
+        "Full-Stack Frameworks",
+        "Testing Moderno",
+        "CI/CD",
+        "Rust en Producción"
+      ],
+      "articlesPerSection": 4
+    },
+    {
+      "id": 3,
+      "name": "Arquitectura de Software",
+      "slug": "arquitectura",
+      "topics": [
+        "Microservicios",
+        "Escalabilidad",
+        "Polyglot Persistence",
+        "Observabilidad"
+      ],
+      "articlesPerSection": 4
+    },
+    {
+      "id": 4,
+      "name": "Nube",
+      "slug": "nube",
+      "topics": [
+        "Multi-Cloud",
+        "Kubernetes",
+        "FinOps",
+        "Edge Cloud"
+      ],
+      "articlesPerSection": 4
+    },
+    {
+      "id": 5,
+      "name": "Inteligencia Artificial",
+      "slug": "ia",
+      "topics": [
+        "LLMs Especializados",
+        "AI Agentes",
+        "Prompt Engineering",
+        "Gobernanza de IA"
+      ],
+      "articlesPerSection": 4
+    },
+    {
+      "id": 6,
+      "name": "Ciberseguridad",
+      "slug": "ciberseguridad",
+      "topics": [
+        "IA Adversaria",
+        "Post-Quantum Cryptography",
+        "Zero Trust",
+        "SIEM/XDR"
+      ],
+      "articlesPerSection": 4
+    }
+  ],
+  "automation": {
+    "enabled": true,
+    "schedule": "0 0 1 * *",
+    "scheduleCron": "First day of every month at 00:00 UTC",
+    "agents": [
+      {
+        "name": "research",
+        "description": "Investigación de tendencias y fuentes",
+        "enabled": true
+      },
+      {
+        "name": "writer",
+        "description": "Redacción de contenido de secciones",
+        "enabled": true
+      },
+      {
+        "name": "designer",
+        "description": "Diseño HTML e integración de imágenes",
+        "enabled": true
+      },
+      {
+        "name": "reviewer",
+        "description": "Revisión editorial y fact-checking",
+        "enabled": true
+      },
+      {
+        "name": "publisher",
+        "description": "Publicación y versionado",
+        "enabled": true
+      }
+    ]
+  },
+  "images": {
+    "stockProvider": "Adobe Stock",
+    "imageFormat": "JPEG",
+    "sectionImageHeight": 320,
+    "categories": {
+      "technology": "minimalist technology abstract",
+      "development": "software development team",
+      "architecture": "digital network connections",
+      "cloud": "data center servers",
+      "ai": "artificial intelligence data",
+      "security": "network security digital"
+    }
+  },
+  "publishing": {
+    "format": "HTML",
+    "outputPath": "issues/",
+    "filenamePattern": "YYYY-MM.html",
+    "repository": "jaguilar0925/refilco",
+    "branch": "main"
+  }
+}

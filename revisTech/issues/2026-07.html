@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevisTech - Revista Digital de Tecnología</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0F172A;
+            --bg-secondary: #1E293B;
+            --text-primary: #F0F7FF;
+            --text-secondary: #94A3B8;
+            --accent-primary: #00D9FF;
+            --accent-secondary: #8B5CF6;
+            --accent-danger: #FF6B6B;
+            --border: #334155;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            page-break-after: always;
+        }
+
+        .page-content {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* PORTADA */
+        .cover {
+            background: linear-gradient(135deg, #0F172A 0%, #1a1f35 100%);
+            border-left: 4px solid var(--accent-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 80px 40px;
+        }
+
+        .cover-subtitle {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cover-title {
+            font-family: var(--font-display);
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cover-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cover-date {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: var(--accent-primary);
+            margin-top: 60px;
+        }
+
+        /* TABLA DE CONTENIDO */
+        .toc-section {
+            padding: 60px 40px;
+        }
+
+        .toc-title {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--text-primary);
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent-primary);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .toc-item {
+            padding: 20px;
+            border-left: 3px solid var(--accent-primary);
+            background: rgba(0, 217, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .toc-item-number {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 8px;
+        }
+
+        .toc-item-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .toc-item-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* SECCIONES DE CONTENIDO */
+        .content-section {
+            padding: 60px 40px;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--accent-primary);
+        }
+
+        .section-number {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .section-lead {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .article-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            border-color: var(--accent-primary);
+            background: rgba(0, 217, 255, 0.05);
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            background: rgba(0, 217, 255, 0.15);
+            color: var(--accent-primary);
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .article-title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ESTILOS ESPECÍFICOS POR SECCIÓN */
+        .tech-accent { color: var(--accent-primary); }
+        .ai-accent { color: var(--accent-secondary); }
+        .security-accent { color: var(--accent-danger); }
+
+        .stat-box {
+            background: rgba(0, 217, 255, 0.1);
+            border-left: 4px solid var(--accent-primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+
+        /* IMPRESIÓN */
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cover-title {
+                font-size: 48px;
+            }
+            .section-title {
+                font-size: 36px;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PÁGINA 1: PORTADA -->
+    <div class="page cover">
+        <div class="page-content">
+            <div class="cover-content">
+                <div class="cover-subtitle">REVISTA DIGITAL 2026</div>
+                <h1 class="cover-title">RevisTech</h1>
+                <p class="cover-description">Tendencias, innovación y perspectivas en tecnología, desarrollo de software, arquitectura, nube, IA y ciberseguridad</p>
+                <div class="cover-date">Julio 2026</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: TABLA DE CONTENIDO -->
+    <div class="page">
+        <div class="page-content">
+            <div class="toc-section">
+                <h2 class="toc-title">Contenido</h2>
+                <div class="toc-grid">
+                    <div class="toc-item">
+                        <div class="toc-item-number">01</div>
+                        <div class="toc-item-title">Tecnología</div>
+                        <div class="toc-item-description">Innovaciones y tendencias tecnológicas del momento</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-item-number">02</div>
+                        <div class="toc-item-title">Desarrollo de Software</div>
+                        <div class="toc-item-description">Metodologías, herramientas y mejores prácticas</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-item-number">03</div>
+                        <div class="toc-item-title">Arquitectura de Software</div>
+                        <div class="toc-item-description">Patrones, diseño y escalabilidad en sistemas</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-item-number">04</div>
+                        <div class="toc-item-title">Nube</div>
+                        <div class="toc-item-description">Cloud computing, infraestructura y optimización</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-item-number">05</div>
+                        <div class="toc-item-title">Inteligencia Artificial</div>
+                        <div class="toc-item-description">Machine Learning, LLMs y aplicaciones prácticas</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-item-number">06</div>
+                        <div class="toc-item-title">Ciberseguridad</div>
+                        <div class="toc-item-description">Amenazas, defensa y compliance en la era digital</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3-4: SECCIÓN 1 - TECNOLOGÍA -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-number">01 / Tecnología</div>
+                    <h2 class="section-title">El Futuro Emergente</h2>
+                    <p class="section-lead">Exploración de las tecnologías más disruptivas que están transformando la industria y redefiniendo lo posible en 2026.</p>
+                </div>
+
+                <img src="https://t3.ftcdn.net/jpg/03/20/81/04/240_F_320810492_nahwhLfkjYVULsZXi62hOVHMKah6Aabn.jpg" alt="Tecnología abstracta" class="section-image">
+
+                <div class="content-grid">
+                    <div class="article-card">
+                        <div class="article-tag">Computación</div>
+                        <h3 class="article-title">Computación Cuántica: Primer Año Productivo</h3>
+                        <p class="article-excerpt">La computación cuántica está dejando el laboratorio. Descubre cómo las primeras aplicaciones comerciales están revolucionando la criptografía, la simulación molecular y la optimización.</p>
+                        <div class="article-meta">
+                            <span>8 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Hardware</div>
+                        <h3 class="article-title">Revolución en Semiconductores</h3>
+                        <p class="article-excerpt">Nuevos materiales y técnicas de fabricación están rompiendo los límites de Moore. Conoce cómo la industria está preparando el siguiente decenio de innovación.</p>
+                        <div class="article-meta">
+                            <span>6 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Conectividad</div>
+                        <h3 class="article-title">5G y Más Allá: El Era de 6G</h3>
+                        <p class="article-excerpt">Mientras 5G se consolida globalmente, los investigadores ya trabajan en 6G. Una mirada a las velocidades, latencias y posibilidades del próximo estándar.</p>
+                        <div class="article-meta">
+                            <span>7 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Edge Computing</div>
+                        <h3 class="article-title">Computación en el Borde</h3>
+                        <p class="article-excerpt">Edge computing acerca el procesamiento a los datos. Explora cómo esta arquitectura está cambiando la latencia, la privacidad y la escalabilidad.</p>
+                        <div class="article-meta">
+                            <span>5 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">247%</div>
+                    <div class="stat-label">Crecimiento en inversión en tech deeptech 2020-2026</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: SECCIÓN 2 - DESARROLLO DE SOFTWARE -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-number">02 / Desarrollo de Software</div>
+                    <h2 class="section-title">Crafting Tomorrow's Code</h2>
+                    <p class="section-lead">Metodologías, frameworks y herramientas que están redefiniendo cómo escribimos, probamos y desplegamos software en la era moderna.</p>
+                </div>
+
+                <img src="https://t4.ftcdn.net/jpg/02/08/64/87/240_F_208648731_pMIcwLSqdI5wW2mgAThKBmR6XMuZJi6y.jpg" alt="Desarrollo de software en equipo" class="section-image">
+
+                <div class="content-grid">
+                    <div class="article-card">
+                        <div class="article-tag">Framework</div>
+                        <h3 class="article-title">El Auge de Frameworks Full-Stack</h3>
+                        <p class="article-excerpt">Plataformas como Next.js, Remix y Svelte Kit están unificando frontend y backend. Analiza cómo esta convergencia mejora la experiencia de desarrollo.</p>
+                        <div class="article-meta">
+                            <span>9 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Testing</div>
+                        <h3 class="article-title">Testing Moderno: Beyond Unit Tests</h3>
+                        <p class="article-excerpt">Test-driven development evoluciona. Descubre testing por capas, e2e automático y cómo la IA está cambiando la manera de asegurar calidad.</p>
+                        <div class="article-meta">
+                            <span>7 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">DevOps</div>
+                        <h3 class="article-title">CI/CD: Automatización Inteligente</h3>
+                        <p class="article-excerpt">Los pipelines modernos no son solo automatización: son observables, predecibles y autocontrolados. Conoce las prácticas de élite.</p>
+                        <div class="article-meta">
+                            <span>8 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Lenguajes</div>
+                        <h3 class="article-title">Rust en Producción: Casos de Éxito</h3>
+                        <p class="article-excerpt">Rust no es una moda: es un cambio de paradigma. Cómo grandes empresas están adoptando seguridad de memoria en sistemas críticos.</p>
+                        <div class="article-meta">
+                            <span>10 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-label">De equipos usan CI/CD en 2026</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 6: SECCIÓN 3 - ARQUITECTURA DE SOFTWARE -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-number">03 / Arquitectura de Software</div>
+                    <h2 class="section-title">Construyendo Para Escala</h2>
+                    <p class="section-lead">Patrones y principios que permiten a los sistemas evolucionar, escalar y adaptarse a la complejidad de sistemas distribuidos modernos.</p>
+                </div>
+
+                <img src="https://t3.ftcdn.net/jpg/02/98/58/52/240_F_298585217_dF8NX4DiMFvCUHJ9RRZ2G6ar4oxyerF8.jpg" alt="Arquitectura de conexiones digitales" class="section-image">
+
+                <div class="content-grid">
+                    <div class="article-card">
+                        <div class="article-tag">Microservicios</div>
+                        <h3 class="article-title">Microservicios: El Post-Boom</h3>
+                        <p class="article-excerpt">Después del hype, ¿qué sigue? Monolitos modulares, arquitecturas coreografidas y las lecciones que hemos aprendido con la práctica.</p>
+                        <div class="article-meta">
+                            <span>9 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Escalabilidad</div>
+                        <h3 class="article-title">De Vertical a Horizontal: El Arte del Scaling</h3>
+                        <p class="article-excerpt">Escalado horizontal trae complejidad. Entiende caché distribuida, particionamiento de datos, y consistencia eventual en sistemas de millones de usuarios.</p>
+                        <div class="article-meta">
+                            <span>11 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Datos</div>
+                        <h3 class="article-title">Polyglot Persistence: Poliglota de Datos</h3>
+                        <p class="article-excerpt">No existe una base de datos para todo. Explora cuándo usar SQL, NoSQL, grafos y time-series para maximizar rendimiento y coherencia.</p>
+                        <div class="article-meta">
+                            <span>8 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Observabilidad</div>
+                        <h3 class="article-title">O11y: Más que Monitoreo</h3>
+                        <p class="article-excerpt">La observabilidad moderna une trazas, métricas y logs. Cómo tener visibilidad completa en sistemas complejos sin perder performance.</p>
+                        <div class="article-meta">
+                            <span>7 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">64%</div>
+                    <div class="stat-label">De arquitectos priorizan observabilidad como factor clave</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 7: SECCIÓN 4 - NUBE -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-number">04 / Nube</div>
+                    <h2 class="section-title">Infraestructura Digital</h2>
+                    <p class="section-lead">Cloud computing ha dejado de ser una opción para ser la realidad operativa. Conoce estrategias de multi-cloud, optimización y arquitecturas modernas.</p>
+                </div>
+
+                <img src="https://t4.ftcdn.net/jpg/12/42/24/01/240_F_1242240154_1N7BPaAvtI5PcQdggbZxAPBJzhpYzWm3.jpg" alt="Data center en nube" class="section-image">
+
+                <div class="content-grid">
+                    <div class="article-card">
+                        <div class="article-tag">Estrategia</div>
+                        <h3 class="article-title">Multi-Cloud: Evitando Lock-in</h3>
+                        <p class="article-excerpt">Nadie quiere depender de un proveedor único. Estrategias de multi-cloud, portabilidad de cargas de trabajo y federación de plataformas.</p>
+                        <div class="article-meta">
+                            <span>8 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Kubernetes</div>
+                        <h3 class="article-title">K8s Más Allá del Hype</h3>
+                        <p class="article-excerpt">Kubernetes domina la orquestación. Pero ¿necesitas toda su complejidad? Descubre cuándo usarlo y cuándo un serverless es mejor opción.</p>
+                        <div class="article-meta">
+                            <span>10 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Costos</div>
+                        <h3 class="article-title">FinOps: Domando la Factura de Nube</h3>
+                        <p class="article-excerpt">La nube sin control de costos es un agujero negro. Prácticas de FinOps que ahorran miles sin sacrificar rendimiento o disponibilidad.</p>
+                        <div class="article-meta">
+                            <span>7 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Edge</div>
+                        <h3 class="article-title">Edge Cloud: Inteligencia Distribuida</h3>
+                        <p class="article-excerpt">CDN evolucionó. Plataformas edge como Cloudflare Workers y AWS Lambda@Edge acercan computación al usuario final.</p>
+                        <div class="article-meta">
+                            <span>6 min lectura</span>
+                            <span class="tech-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">94%</div>
+                    <div class="stat-label">De empresas usan cloud en 2026 (público, privado o híbrido)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 8: SECCIÓN 5 - INTELIGENCIA ARTIFICIAL -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-number">05 / Inteligencia Artificial</div>
+                    <h2 class="section-title">La Era del Aprendizaje</h2>
+                    <p class="section-lead">De modelos generativos a sistemas agenticos, la IA está transformando todas las capas del stack tecnológico y la forma en que creamos.</p>
+                </div>
+
+                <img src="https://t4.ftcdn.net/jpg/03/50/91/84/240_F_350918441_UFZqSHCNpvYf5uf48jvDq5oQZv8wZ6Qt.jpg" alt="Inteligencia Artificial y datos" class="section-image">
+
+                <div class="content-grid">
+                    <div class="article-card">
+                        <div class="article-tag">LLM</div>
+                        <h3 class="article-title">LLMs Especializados: El Futuro</h3>
+                        <p class="article-excerpt">Modelos gigantes dan paso a expertos especializados. Más rápidos, más baratos, más predecibles. La IA se vuelve práctica.</p>
+                        <div class="article-meta">
+                            <span>9 min lectura</span>
+                            <span class="ai-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Agentes</div>
+                        <h3 class="article-title">AI Agentes: Autonomía Controlada</h3>
+                        <p class="article-excerpt">Los agentes IA pueden razonar, planificar y actuar. Cómo construir sistemas autónomos que son seguros, predecibles y auditables.</p>
+                        <div class="article-meta">
+                            <span>11 min lectura</span>
+                            <span class="ai-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Prompt</div>
+                        <h3 class="article-title">Prompt Engineering: Ciencia, No Arte</h3>
+                        <p class="article-excerpt">El prompt perfecto no es intuición: es ciencia. Técnicas de ingeniería de prompts que maximizan accuracy y minimizan alucinaciones.</p>
+                        <div class="article-meta">
+                            <span>8 min lectura</span>
+                            <span class="ai-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Ética</div>
+                        <h3 class="article-title">Gobernanza de IA: Responsabilidad y Compliance</h3>
+                        <p class="article-excerpt">Sesgos, alucinaciones, privacidad. Marcos de gobernanza que hacen la IA responsable en producción.</p>
+                        <div class="article-meta">
+                            <span>10 min lectura</span>
+                            <span class="ai-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">78%</div>
+                    <div class="stat-label">De desarrolladores ya usan IA en su flujo de trabajo diario</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 9-10: SECCIÓN 6 - CIBERSEGURIDAD -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="section-number">06 / Ciberseguridad</div>
+                    <h2 class="section-title">Defendiendo lo Digital</h2>
+                    <p class="section-lead">En un mundo de amenazas sofisticadas y ataques cada vez más inteligentes, la defensa debe ser igual de inteligente y proactiva.</p>
+                </div>
+
+                <img src="https://t4.ftcdn.net/jpg/02/95/08/87/240_F_295088748_UZwWPvAMQF9Lw5tFL5DgVzKVSimCxnjI.jpg" alt="Seguridad de red digital" class="section-image">
+
+                <div class="content-grid">
+                    <div class="article-card">
+                        <div class="article-tag">Amenaza</div>
+                        <h3 class="article-title">IA Adversaria: Cuando el Atacante Usa IA</h3>
+                        <p class="article-excerpt">Los atacantes no se quedan atrás. Modelos de IA maliciosos, ataques adversariales y cómo defenderse de amenazas generadas por IA.</p>
+                        <div class="article-meta">
+                            <span>9 min lectura</span>
+                            <span class="security-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Criptografía</div>
+                        <h3 class="article-title">Post-Quantum Cryptography: Preparándose para el Futuro</h3>
+                        <p class="article-excerpt">La computación cuántica amenaza la criptografía actual. Migración a algoritmos post-cuánticos: cómo y cuándo prepararse.</p>
+                        <div class="article-meta">
+                            <span>8 min lectura</span>
+                            <span class="security-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Zero Trust</div>
+                        <h3 class="article-title">Zero Trust: Nunca Confiar, Siempre Verificar</h3>
+                        <p class="article-excerpt">El perímetro ya no existe. Arquitecturas Zero Trust que verifican cada acceso, cada conexión, cada dispositivo.</p>
+                        <div class="article-meta">
+                            <span>10 min lectura</span>
+                            <span class="security-accent">→</span>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-tag">Incidentes</div>
+                        <h3 class="article-title">SIEM y XDR: Detección y Respuesta Automática</h3>
+                        <p class="article-excerpt">Detectar ataques más rápido que nunca. Plataformas de seguridad que correlacionan datos y responden automáticamente a amenazas.</p>
+                        <div class="article-meta">
+                            <span>7 min lectura</span>
+                            <span class="security-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-number">4.1M</div>
+                    <div class="stat-label">Brechas de datos registradas globalmente en 2024-2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 10: CIERRE -->
+    <div class="page">
+        <div class="page-content">
+            <div class="content-section" style="text-align: center; padding: 80px 40px;">
+                <h2 class="section-title" style="font-size: 48px; margin-bottom: 30px;">El Viaje Continúa</h2>
+                <p class="section-lead" style="max-width: 600px; margin: 0 auto; margin-bottom: 40px; font-size: 18px;">
+                    La tecnología evoluciona a un ritmo vertiginoso. Desde semiconductores cuánticos hasta IA agentica, desde arquitecturas distribuidas hasta defensa post-cuántica: el futuro se construye hoy.
+                </p>
+
+                <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--accent-primary);">
+                    <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">
+                        PRÓXIMA EDICIÓN
+                    </p>
+                    <p style="font-size: 16px; color: var(--text-secondary);">
+                        Suscríbete para recibir análisis profundos sobre las tecnologías que están transformando el mundo
+                    </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <p style="font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary); letter-spacing: 1px;">
+                        RevisTech © 2026 | Revista Digital de Tecnología
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Archivos temporales
+*.tmp
+*.log
+*.cache
+
+# Directorios generados automáticamente
+node_modules/
+__pycache__/
+.DS_Store
+
+# Archivos de desarrollo local
+.env.local
+*.swp
+*.swo
+
+# Compilación
+dist/
+build/
+
+# Imágenes descargadas (se versionan en issues/)
+content/images/temp/
+
+# Reportes de revisión sin aprobar (los aprobados sí se versiona)
+automation/reviews/*-draft.md
+
+# Archivos de bloqueo
+*.lock
+package-lock.json
