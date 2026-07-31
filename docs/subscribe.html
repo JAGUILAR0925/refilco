@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscribirse - Quantic IA Magazine</title>
+    <meta name="description" content="Suscribirse a Quantic IA Magazine. Acceso a ediciones completas, contenido exclusivo y productos premium.">
+    <meta name="theme-color" content="#0F172A">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+        :root {
+            --bg: #0F172A;
+            --bg-light: #1E293B;
+            --text: #F0F7FF;
+            --text-dim: #94A3B8;
+            --cyan: #00D9FF;
+            --purple: #8B5CF6;
+            --red: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg) 0%, #1a2f5f 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            padding: 40px 20px;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .logo-text h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .logo-text p {
+            font-size: 10px;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+
+        .nav-links a.active {
+            color: var(--cyan);
+            border-bottom: 2px solid var(--cyan);
+            padding-bottom: 4px;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .subscribe-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .subscribe-header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subscribe-header p {
+            font-size: 18px;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* TIERS SECTION */
+        .tiers-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .tier-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(0, 217, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tier-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .tier-card.featured {
+            border: 2px solid var(--cyan);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        .tier-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--cyan);
+            color: var(--bg);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: none;
+        }
+
+        .tier-card.featured .tier-badge {
+            display: block;
+        }
+
+        .tier-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .tier-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 4px;
+        }
+
+        .tier-price span {
+            font-size: 16px;
+            color: var(--text-dim);
+        }
+
+        .tier-description {
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .tier-benefits {
+            list-style: none;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .tier-benefits li {
+            padding: 10px 0;
+            color: var(--text-dim);
+            font-size: 14px;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .tier-benefits li:last-child {
+            border-bottom: none;
+        }
+
+        .tier-benefits li::before {
+            content: "✓ ";
+            color: var(--cyan);
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .tier-button {
+            padding: 14px 24px;
+            background: var(--cyan);
+            color: var(--bg);
+            border: 2px solid var(--cyan);
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+        }
+
+        .tier-button:hover {
+            background: transparent;
+            color: var(--cyan);
+        }
+
+        .tier-card.featured .tier-button {
+            background: var(--purple);
+            border-color: var(--purple);
+        }
+
+        .tier-card.featured .tier-button:hover {
+            background: transparent;
+            color: var(--purple);
+        }
+
+        /* PRODUCTS SECTION */
+        .products-section {
+            margin-bottom: 80px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border: 1px solid rgba(255, 107, 107, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .product-description {
+            color: var(--text-dim);
+            font-size: 14px;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--red);
+            margin-bottom: 16px;
+        }
+
+        .product-button {
+            padding: 12px 20px;
+            background: rgba(255, 107, 107, 0.1);
+            color: var(--red);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+
+        .product-button:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        /* WHY SUPPORT SECTION */
+        .why-support {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .why-support h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: center;
+            color: var(--text);
+        }
+
+        .transparency-box {
+            background: rgba(15, 23, 42, 0.5);
+            border-left: 4px solid var(--cyan);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .transparency-box h3 {
+            color: var(--cyan);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .transparency-box p {
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        /* FAQ SECTION */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            color: var(--cyan);
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            color: var(--text-dim);
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            color: var(--cyan);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .subscribe-header h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tier-card.featured {
+                transform: scale(1);
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-support {
+                padding: 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    <h1>Quantic IA</h1>
+                    <p>Magazine</p>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="archive.html">Archivo</a></li>
+                    <li><a href="subscribe.html" class="active">Suscribirse</a></li>
+                    <li><a href="mailto:jaguilar0925@gmail.com">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="subscribe-header">
+            <h1>Suscribirse a Quantic IA Magazine</h1>
+            <p>Apoya el periodismo tecnológico independiente. Acceso a contenido exclusivo, análisis profundo e investigaciones verificadas.</p>
+        </div>
+
+        <!-- PATREON SECTION -->
+        <div class="tiers-section">
+            <h2 class="section-title">Planes Patreon</h2>
+            <p class="section-subtitle">Elige el plan que mejor se adapte a tus necesidades</p>
+
+            <div class="tiers-grid">
+                <!-- Tier 1: Supporter -->
+                <div class="tier-card">
+                    <div class="tier-name">Supporter</div>
+                    <div class="tier-price">$5<span>/mes</span></div>
+                    <p class="tier-description">Acceso básico a todas las ediciones</p>
+                    <ul class="tier-benefits">
+                        <li>Ediciones PDF descargables</li>
+                        <li>Archivo completo de ediciones</li>
+                        <li>Newsletter mensual</li>
+                        <li>Comunidad privada</li>
+                    </ul>
+                    <a href="https://patreon.com/revisTech" class="tier-button" target="_blank">Unirme a Patreon</a>
+                </div>
+
+                <!-- Tier 2: Professional (Featured) -->
+                <div class="tier-card featured">
+                    <span class="tier-badge">Recomendado</span>
+                    <div class="tier-name">Professional</div>
+                    <div class="tier-price">$15<span>/mes</span></div>
+                    <p class="tier-description">Acceso premium con contenido exclusivo</p>
+                    <ul class="tier-benefits">
+                        <li>Todos los beneficios Supporter</li>
+                        <li>Acceso anticipado a ediciones</li>
+                        <li>Newsletter semanal exclusivo</li>
+                        <li>Borradores sin publicar</li>
+                        <li>Descuentos en productos</li>
+                    </ul>
+                    <a href="https://patreon.com/revisTech" class="tier-button" target="_blank">Unirme a Patreon</a>
+                </div>
+
+                <!-- Tier 3: Enterprise -->
+                <div class="tier-card">
+                    <div class="tier-name">Enterprise</div>
+                    <div class="tier-price">$50<span>/mes</span></div>
+                    <p class="tier-description">Acceso VIP con soporte prioritario</p>
+                    <ul class="tier-benefits">
+                        <li>Todos los beneficios Professional</li>
+                        <li>Llamada mensual con editor</li>
+                        <li>Reportes personalizados</li>
+                        <li>Mención especial mensual</li>
+                        <li>Descuento 50% en consultorías</li>
+                    </ul>
+                    <a href="https://patreon.com/revisTech" class="tier-button" target="_blank">Unirme a Patreon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCTS SECTION -->
+        <div class="products-section">
+            <h2 class="section-title">Productos Gumroad</h2>
+            <p class="section-subtitle">Ebooks, cursos y recursos premium</p>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-category">Ebook</div>
+                    <div class="product-name">IA Transparente en Periodismo</div>
+                    <p class="product-description">Cómo utilizamos IA manteniendo integridad editorial. Metodología, herramientas y mejores prácticas.</p>
+                    <div class="product-price">$9.99</div>
+                    <a href="https://gumroad.com/revisTech" class="product-button" target="_blank">Comprar Ahora</a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-category">Curso</div>
+                    <div class="product-name">Arquitectura en la Nube</div>
+                    <p class="product-description">Guía completa de patrones de arquitectura moderna. Casos de uso, mejores prácticas y decisiones de diseño.</p>
+                    <div class="product-price">$99.99</div>
+                    <a href="https://gumroad.com/revisTech" class="product-button" target="_blank">Comprar Ahora</a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-category">Masterclass</div>
+                    <div class="product-name">Construyendo Agentes IA</div>
+                    <p class="product-description">Aprende a crear agentes de IA que realmente funcionan. Arquitectura, prompting y orquestación de herramientas.</p>
+                    <div class="product-price">$49.99</div>
+                    <a href="https://gumroad.com/revisTech" class="product-button" target="_blank">Comprar Ahora</a>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-category">Dataset</div>
+                    <div class="product-name">Tendencias Mensual Tech</div>
+                    <p class="product-description">Dataset actualizado mensualmente con análisis de tendencias tecnológicas. Formato CSV/JSON.</p>
+                    <div class="product-price">$19.99</div>
+                    <a href="https://gumroad.com/revisTech" class="product-button" target="_blank">Comprar Ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHY SUPPORT SECTION -->
+        <div class="why-support">
+            <h2>¿Por qué apoyar Quantic IA Magazine?</h2>
+
+            <div class="transparency-box">
+                <h3>Impulsada por IA, Supervisada por Humanos</h3>
+                <p>Utilizamos tecnología de IA avanzada para investigación, análisis y redacción, pero cada artículo es revisado y aprobado por expertos humanos. Obtienes lo mejor de ambos mundos: eficiencia de IA + rigor editorial humano.</p>
+            </div>
+
+            <div class="transparency-box">
+                <h3>Contenido Técnico Profundo</h3>
+                <p>No hacemos clickbait. Cada edición contiene 24 artículos especializados en 6 áreas: Tecnología, Desarrollo, Arquitectura, Nube, IA y Ciberseguridad. Análisis profundo de tendencias reales.</p>
+            </div>
+
+            <div class="transparency-box">
+                <h3>Independencia Editorial</h3>
+                <p>Somos independientes. No estamos atados a corporaciones grandes. Tu apoyo nos permite mantener estándares editoriales altos sin presiones comerciales.</p>
+            </div>
+
+            <div class="faq-section">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin-bottom: 24px; color: var(--text);">Preguntas Frecuentes</h2>
+
+                <div class="faq-item">
+                    <h4>¿Puedo acceder al contenido sin suscribción?</h4>
+                    <p>Sí. Publicamos ediciones completas en nuestro archivo público. La suscripción ofrece acceso anticipado, contenido exclusivo y soporte directo.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Cuál es la diferencia entre Patreon y Gumroad?</h4>
+                    <p>Patreon es suscripción recurrente mensual con acceso a todo el contenido. Gumroad es para compras únicas de productos específicos como ebooks y cursos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Puedo cambiar de plan?</h4>
+                    <p>Sí. En Patreon puedes cambiar, pausar o cancelar tu suscripción en cualquier momento. No hay compromiso de largo plazo.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Quién eres?</h4>
+                    <p>Soy Juan Carlos Aguilar, ingeniero de software con experiencia en IA, cloud y arquitectura. Quantic IA Magazine es mi proyecto para compartir conocimiento técnico profundo con la comunidad.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Aceptan patrocinios empresariales?</h4>
+                    <p>Sí. Si tu empresa quiere patrocinar ediciones, escríbeme a jaguilar0925@gmail.com con detalles sobre tu propuesta.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="archive.html">Archivo</a></li>
+                    <li><a href="mailto:jaguilar0925@gmail.com">Contactar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Plataformas</h3>
+                <ul>
+                    <li><a href="https://patreon.com/revisTech" target="_blank">Patreon</a></li>
+                    <li><a href="https://gumroad.com/revisTech" target="_blank">Gumroad</a></li>
+                    <li><a href="https://github.com/jaguilar0925/refilco" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Comunidad</h3>
+                <ul>
+                    <li>Impulsada por IA</li>
+                    <li>Supervisada por Humanos</li>
+                    <li>Contenido Técnico Profundo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quantic IA Magazine. Todos los derechos reservados. | <a href="mailto:jaguilar0925@gmail.com" style="color: var(--cyan);">Contacto</a></p>
+        </div>
+    </footer>
+</body>
+</html>

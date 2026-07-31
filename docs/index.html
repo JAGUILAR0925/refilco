@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantic IA Magazine - Revista Digital de Tecnología</title>
+    <meta name="description" content="Revista digital mensual especializada en tecnología, desarrollo de software, arquitectura, nube, IA y ciberseguridad. Impulsada por Agentes de IA, supervisada por humanos.">
+    <meta name="theme-color" content="#0F172A">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+        :root {
+            --bg: #0F172A;
+            --bg-light: #1E293B;
+            --text: #F0F7FF;
+            --text-dim: #94A3B8;
+            --cyan: #00D9FF;
+            --purple: #8B5CF6;
+            --red: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg) 0%, #1a2f5f 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            padding: 40px 20px;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .logo-symbol {
+            width: 48px;
+            height: 48px;
+        }
+
+        .logo-text h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+
+        /* HERO */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tagline {
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            color: var(--bg);
+            box-shadow: 0 8px 32px rgba(0, 217, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 48px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--purple);
+            border: 2px solid var(--purple);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(139, 92, 246, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* STATS */
+        .stats {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .stat-box {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-dim);
+        }
+
+        /* SECTIONS */
+        .sections {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+
+        .sections h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .section-card {
+            background: rgba(0, 217, 255, 0.05);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--cyan);
+            transition: all 0.3s;
+        }
+
+        .section-card:hover {
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .section-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--cyan);
+        }
+
+        .section-card p {
+            font-size: 14px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        /* SPONSORS */
+        .sponsors-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 60px 40px;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .sponsors-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .sponsors-section p {
+            font-size: 16px;
+            color: var(--text-dim);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .pricing-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .tier {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .tier.featured {
+            border: 2px solid var(--cyan);
+            transform: scale(1.05);
+        }
+
+        .tier h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--cyan);
+        }
+
+        .tier-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--purple);
+            margin-bottom: 16px;
+        }
+
+        .tier-price span {
+            font-size: 16px;
+            color: var(--text-dim);
+        }
+
+        .tier ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .tier li {
+            padding: 8px 0;
+            color: var(--text-dim);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .tier li:before {
+            content: "✓ ";
+            color: var(--cyan);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .tier li:last-child {
+            border-bottom: none;
+        }
+
+        /* ABOUT */
+        .about-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+
+        .about-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            color: var(--text-dim);
+        }
+
+        .about-text strong {
+            color: var(--cyan);
+        }
+
+        .about-highlights {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .about-highlights li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            color: var(--text-dim);
+        }
+
+        .about-highlights li:before {
+            content: "⚡ ";
+            margin-right: 8px;
+            color: var(--purple);
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            padding: 40px;
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            text-align: center;
+            color: var(--text-dim);
+        }
+
+        footer p {
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+
+        .footer-links a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--purple);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <svg class="logo-symbol" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="55" fill="none" stroke="#00D9FF" stroke-width="2" opacity="0.6"/>
+                    <circle cx="70" cy="70" r="42" fill="none" stroke="#8B5CF6" stroke-width="1.5" opacity="0.5" stroke-dasharray="5,5"/>
+                    <circle cx="70" cy="70" r="28" fill="none" stroke="#00D9FF" stroke-width="2" opacity="0.8"/>
+                    <circle cx="70" cy="35" r="6" fill="#00D9FF"/>
+                    <circle cx="100" cy="60" r="6" fill="#8B5CF6"/>
+                    <circle cx="95" cy="95" r="6" fill="#00D9FF"/>
+                    <circle cx="45" cy="95" r="6" fill="#8B5CF6"/>
+                    <circle cx="40" cy="60" r="6" fill="#00D9FF"/>
+                    <circle cx="70" cy="70" r="4" fill="#FF6B6B"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>Quantic<br/>IA</h1>
+                    <p>Magazine</p>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="archive.html">Archivo</a></li>
+                    <li><a href="subscribe.html">Suscribirse</a></li>
+                    <li><a href="mailto:jaguilar0925@gmail.com">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Contenido Técnico Profundo</h2>
+        <p>Revista digital mensual especializada en tecnología, desarrollo de software, arquitectura, nube, inteligencia artificial y ciberseguridad.</p>
+        <p class="tagline">🤖 Investigado por IA • 👤 Validado por Humanos</p>
+        <div class="cta-buttons">
+            <a href="mailto:jaguilar0925@gmail.com?subject=Interés en Sponsorship Quantic IA Magazine" class="btn btn-primary">
+                Ser Sponsor
+            </a>
+            <a href="#sponsors" class="btn btn-secondary">
+                Ver Precios
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stat-box">
+            <div class="stat-number">24</div>
+            <div class="stat-label">Artículos por Edición</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Secciones Especializadas</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">30</div>
+            <div class="stat-label">Días de Producción</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Alcance Global</div>
+        </div>
+    </section>
+
+    <!-- SECTIONS -->
+    <section class="sections" id="sections">
+        <h3>Nuestras Secciones</h3>
+        <div class="section-grid">
+            <div class="section-card">
+                <h4>🔬 Tecnología</h4>
+                <p>Computación cuántica, semiconductores, 5G/6G, edge computing y tendencias emergentes.</p>
+            </div>
+            <div class="section-card">
+                <h4>💻 Desarrollo</h4>
+                <p>Frameworks, testing moderno, CI/CD, Rust y mejores prácticas de codificación.</p>
+            </div>
+            <div class="section-card">
+                <h4>🏗️ Arquitectura</h4>
+                <p>Microservicios, escalabilidad, observabilidad y patrones de diseño avanzados.</p>
+            </div>
+            <div class="section-card">
+                <h4>☁️ Nube</h4>
+                <p>Multi-cloud, Kubernetes, FinOps, edge cloud y infraestructura moderna.</p>
+            </div>
+            <div class="section-card">
+                <h4>🤖 IA</h4>
+                <p>LLMs, agentes, prompt engineering, gobernanza de IA y aplicaciones prácticas.</p>
+            </div>
+            <div class="section-card">
+                <h4>🔐 Ciberseguridad</h4>
+                <p>IA adversaria, zero trust, criptografía post-cuántica, SIEM/XDR y defensa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section class="sponsors-section" id="sponsors">
+        <h3>Sé Parte de Quantic IA Magazine</h3>
+        <p>Alcanza 5,000+ ingenieros, arquitectos y tech leaders con tu mensaje. Cada mes, nuevos lectores descubren soluciones innovadoras en nuestras páginas.</p>
+
+        <div class="pricing-tiers">
+            <div class="tier">
+                <h4>Founding</h4>
+                <div class="tier-price">$150<span>/mes</span></div>
+                <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 16px;">Meses 1-2 solamente</p>
+                <ul>
+                    <li>Logo + enlace en revista</li>
+                    <li>Mención en newsletter</li>
+                    <li>1 página dedicada</li>
+                    <li>Email signature</li>
+                </ul>
+            </div>
+            <div class="tier featured">
+                <h4>Premium</h4>
+                <div class="tier-price">$200<span>/mes</span></div>
+                <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 16px;">Mes 3 en adelante</p>
+                <ul>
+                    <li>Logo + enlace en revista</li>
+                    <li>Mención en newsletter</li>
+                    <li>2 páginas dedicadas</li>
+                    <li>Email signature</li>
+                    <li>Social media mentions</li>
+                </ul>
+            </div>
+            <div class="tier">
+                <h4>Annual</h4>
+                <div class="tier-price">$150<span>/mes</span></div>
+                <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 16px;">Compromiso anual</p>
+                <ul>
+                    <li>Todo Premium</li>
+                    <li>25% descuento</li>
+                    <li>Sponsor logo destacado</li>
+                    <li>Acceso prioritario</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-size: 18px; margin-bottom: 20px;">¿Listo para ser parte de la revolución?</p>
+            <a href="mailto:jaguilar0925@gmail.com?subject=Sponsorship Quantic IA Magazine" class="btn btn-primary">
+                Contactar para Sponsorship
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <h3>Sobre Quantic IA Magazine</h3>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Quantic IA Magazine</strong> es una revista digital mensual especializada en tendencias y análisis profundo de tecnología, impulsada por agentes de Inteligencia Artificial y supervisada por humanos.</p>
+
+                <p>Nuestro proceso de producción combina la velocidad y escala de la IA con la confiabilidad y juicio crítico de la supervisión humana.</p>
+
+                <ul class="about-highlights">
+                    <li>6 secciones especializadas</li>
+                    <li>24 artículos por edición</li>
+                    <li>Producción en 30 días</li>
+                    <li>Distribución global</li>
+                    <li>Contenido verificado</li>
+                </ul>
+            </div>
+            <div class="about-text">
+                <h4 style="font-size: 24px; color: var(--cyan); margin-bottom: 24px;">Nuestro Proceso</h4>
+                <ul class="about-highlights" style="list-style: none;">
+                    <li style="border: none; padding: 16px 0;"><strong>Investigación</strong><br/>6 agentes especializados analizan tendencias</li>
+                    <li style="border: none; padding: 16px 0;"><strong>Redacción</strong><br/>6 agentes redactan artículos profesionales</li>
+                    <li style="border: none; padding: 16px 0;"><strong>Diseño</strong><br/>1 agente crea diseño HTML5 responsivo</li>
+                    <li style="border: none; padding: 16px 0;"><strong>Revisión</strong><br/>Editorial y fact-checking automatizado</li>
+                    <li style="border: none; padding: 16px 0;"><strong>Aprobación</strong><br/>Supervisión humana final</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>🤖 Quantic IA Magazine - Impulsada por Agentes de IA • Supervisada por Humanos</p>
+        <p>Contacto: <strong>jaguilar0925@gmail.com</strong></p>
+        <div class="footer-links">
+            <a href="mailto:jaguilar0925@gmail.com">Email</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+        <p style="margin-top: 32px; font-size: 12px;">© 2026 Quantic IA Magazine. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

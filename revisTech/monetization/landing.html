@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantic IA Magazine Premium - Acceso Exclusivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0F172A;
+            --bg-light: #1E293B;
+            --text: #F0F7FF;
+            --text-dim: #94A3B8;
+            --cyan: #00D9FF;
+            --purple: #8B5CF6;
+            --red: #FF6B6B;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--bg) 0%, #1a2f5f 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 60px 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+        }
+
+        /* HERO STATS */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 3px solid var(--cyan);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* PRICING */
+        .pricing-section {
+            margin-bottom: 100px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--cyan);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .pricing-card {
+            background: var(--bg-light);
+            border: 2px solid var(--text-dim);
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--cyan);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--cyan);
+            color: var(--bg);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tier-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .tier-description {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 5px;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li:before {
+            content: "✓";
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            color: var(--bg);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 217, 255, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--cyan);
+            color: var(--cyan);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(0, 217, 255, 0.1);
+        }
+
+        /* BENEFITS */
+        .benefits-section {
+            background: var(--bg-light);
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-bottom: 80px;
+            border-left: 4px solid var(--purple);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .benefit {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .benefit-text {
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-bottom: 80px;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--cyan);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(0, 217, 255, 0.05);
+        }
+
+        .faq-question {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-dim);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* CTA FOOTER */
+        .footer-cta {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
+            border-radius: 12px;
+            border: 2px solid var(--cyan);
+        }
+
+        .footer-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer-cta p {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .footer-cta .cta-button {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-dim);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo">📱 Quantic IA Magazine</div>
+            <h1>Acceso Premium</h1>
+            <p class="tagline">Desbloquea contenido exclusivo de una revista dedicada a tecnología, desarrollo y arquitectura de software</p>
+        </header>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">5K+</div>
+                <div class="stat-label">Lectores Mensuales</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Artículos/Mes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Secciones Premium</div>
+            </div>
+        </div>
+
+        <!-- PRICING -->
+        <section class="pricing-section">
+            <h2 class="section-title">Planes de Suscripción</h2>
+
+            <div class="pricing-grid">
+                <!-- SUPPORTER -->
+                <div class="pricing-card">
+                    <div class="tier-name">Supporter</div>
+                    <p class="tier-description">Para los curiosos</p>
+                    <div class="price">$5<span style="font-size: 20px;">/mes</span></div>
+                    <div class="price-period">Renovable mensualmente</div>
+                    <ul class="features">
+                        <li>Descargar ediciones en PDF</li>
+                        <li>Archivo de ediciones anteriores</li>
+                        <li>Acceso a 4 artículos exclusivos</li>
+                        <li>Mención en newsletter</li>
+                    </ul>
+                    <a href="https://patreon.com/revisTech" class="cta-button cta-secondary">Suscribirse</a>
+                </div>
+
+                <!-- PROFESSIONAL -->
+                <div class="pricing-card featured">
+                    <div class="badge">Más Popular</div>
+                    <div class="tier-name">Professional</div>
+                    <p class="tier-description">Para engineers serios</p>
+                    <div class="price">$15<span style="font-size: 20px;">/mes</span></div>
+                    <div class="price-period">Renovable mensualmente</div>
+                    <ul class="features">
+                        <li>TODO de Supporter +</li>
+                        <li>Newsletter semanal análisis</li>
+                        <li>Early access 48h antes</li>
+                        <li>Research findings brutos</li>
+                        <li>Acceso a chat privado</li>
+                    </ul>
+                    <a href="https://patreon.com/revisTech" class="cta-button">Suscribirse Ahora</a>
+                </div>
+
+                <!-- ENTERPRISE -->
+                <div class="pricing-card">
+                    <div class="tier-name">Enterprise</div>
+                    <p class="tier-description">Para organizaciones</p>
+                    <div class="price">$50<span style="font-size: 20px;">/mes</span></div>
+                    <div class="price-period">Renovable mensualmente</div>
+                    <ul class="features">
+                        <li>TODO de Professional +</li>
+                        <li>Consulta 30min/mes con experto</li>
+                        <li>Reports customizados</li>
+                        <li>Logo en Quantic IA Magazine</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <a href="mailto:tu@email.com?subject=Quantic IA Magazine%20Enterprise" class="cta-button cta-secondary">Contactar Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="benefits-section">
+            <h2 class="section-title">¿Por qué Premium?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-title">Análisis Profundo</div>
+                    <p class="benefit-text">No solo noticias, sino análisis técnico de impacto real para tu trabajo</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⏰</div>
+                    <div class="benefit-title">Early Access</div>
+                    <p class="benefit-text">Acceso 48h antes que el público a ediciones nuevas</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-title">Archivo Completo</div>
+                    <p class="benefit-text">Acceso a todas las ediciones anteriores (indexadas y buscables)</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">💬</div>
+                    <div class="benefit-title">Comunidad</div>
+                    <p class="benefit-text">Chat privado con otros suscriptores y creadores</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-title">Contenido Curado</div>
+                    <p class="benefit-text">Tendencias seleccionadas por expertos en cada sección</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">📖</div>
+                    <div class="benefit-title">PDF Descargable</div>
+                    <p class="benefit-text">Diseño profesional, listo para compartir o imprimir</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">¿Puedo cambiar de plan?</div>
+                <div class="faq-answer">Sí, puedes cambiar o cancelar tu suscripción en cualquier momento sin penalización.</div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">¿Se renueva automáticamente?</div>
+                <div class="faq-answer">Sí, se renueva mensualmente. Recibirás una notificación antes de cada renovación.</div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">¿Qué métodos de pago aceptan?</div>
+                <div class="faq-answer">Aceptamos tarjetas de crédito/débito, PayPal y transferencias bancarias (para empresas).</div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">¿Hay acceso de prueba?</div>
+                <div class="faq-answer">Sí, versión gratuita disponible en GitHub. Pruébala antes de suscribirse.</div>
+            </div>
+
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">¿Es reembolsable?</div>
+                <div class="faq-answer">Dentro de los primeros 7 días, puedes solicitar un reembolso completo sin preguntas.</div>
+            </div>
+        </section>
+
+        <!-- FOOTER CTA -->
+        <section class="footer-cta">
+            <h2>¿Listo para llevar tu aprendizaje al siguiente nivel?</h2>
+            <p>Únete a miles de developers, architects y tech leads que confían en Quantic IA Magazine</p>
+            <a href="https://patreon.com/revisTech" class="cta-button">Comenzar Ahora Mismo</a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                Quantic IA Magazine © 2026 |
+                <a href="https://github.com/jaguilar0925/refilco" style="color: var(--cyan); text-decoration: none;">GitHub</a> |
+                <a href="mailto:tu@email.com" style="color: var(--cyan); text-decoration: none;">Contacto</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
