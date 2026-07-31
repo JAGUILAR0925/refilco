@@ -36,7 +36,10 @@ Quick facts:
 - Monthly distribution + weekly newsletter
 - High engagement in cloud topics
 
-Sponsorship starts at $300/month (including logo, mention, link).
+Sponsorship pricing:
+- Months 1-2: $150/month (launching rate)
+- Month 3+: $200/month
+- Annual commitment: $150/month (save 25%)
 
 Would this be interesting for your team? Happy to set up a quick call.
 
@@ -63,7 +66,12 @@ RevisTech reaches 5,000+ engineers monthly with in-depth coverage of:
 
 Your audience: Mid-level to senior engineers evaluating cloud platforms.
 
-Interest in sponsoring the "Cloud" section? ($350/month)
+Interest in sponsoring the "Cloud" section?
+
+Pricing:
+- Months 1-2: $150/month
+- Month 3+: $200/month  
+- Annual: $150/month
 
 Would love to discuss. Free to chat this week.
 
@@ -90,7 +98,10 @@ RevisTech is a monthly magazine for 5,000+ developers focused on:
 
 Many of our readers actively use GitHub daily. Could be a good fit.
 
-Sponsorship options start at $300/month.
+Sponsorship options:
+- Months 1-2: $150/month (launching rate)
+- Month 3+: $200/month
+- Annual commitment: $150/month
 
 Interested in exploring? Let me know your availability.
 
@@ -117,7 +128,7 @@ RevisTech reaches 5,000+ developers with content on:
 
 Our readers are exactly your target audience.
 
-Sponsorship: $350/month (logo, mention, dedicated section)
+Sponsorship: $150/month launching (months 1-2), $200/month after, or $150/month if annual
 
 Would you like to explore this? Happy to jump on a call.
 
@@ -142,8 +153,9 @@ coverage of observability, monitoring, and infrastructure.
 Your product aligns perfectly with our audience's interests.
 
 Sponsorship options:
-- Gold: $350/month
-- Silver: $300/month
+- Months 1-2: $150/month (launching rate)
+- Month 3+: $200/month
+- Annual commitment: $150/month (best value)
 
 Would this interest your team? Let's talk.
 
@@ -170,7 +182,7 @@ RevisTech reaches 5,000+ developers monthly with focus on:
 
 Many readers use Docker daily. Great brand alignment.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested? Available for a quick call this week.
 
@@ -194,7 +206,7 @@ RevisTech publishes monthly for 5,000+ engineers with dedicated
 
 Your solution is perfect for this audience.
 
-Sponsorship: $300/month (logo + mention + link)
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual (logo + mention + link)
 
 Worth exploring? Let me know.
 
@@ -218,7 +230,7 @@ developers focused on security best practices.
 
 Your product is highly relevant to this audience.
 
-Sponsorship: $350/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested in discussing? Let's set up a call.
 
@@ -245,7 +257,7 @@ RevisTech reaches 5,000+ engineers with coverage of:
 
 Perfect audience for Cloudflare.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Would you like to explore? Free to chat.
 
@@ -272,7 +284,7 @@ RevisTech publishes monthly for 5,000+ developers with coverage of:
 
 Our readers actively choose databases for projects.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested? Happy to discuss.
 
@@ -296,7 +308,7 @@ and "Architecture" sections.
 
 Your identity platform is relevant to this audience.
 
-Sponsorship: $250/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Worth exploring? Let me know.
 
@@ -320,7 +332,7 @@ DevOps, and scalable applications.
 
 Your audience = our readers.
 
-Sponsorship: $300/month (logo, mention, link)
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual (logo, mention, link)
 
 Interested in exploring? Free to chat this week.
 
@@ -344,7 +356,7 @@ RevisTech covers software development, CI/CD, and DevOps for
 
 Your platform is highly relevant to our audience.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Would you like to discuss? Available for a quick call.
 
@@ -368,7 +380,7 @@ quality, monitoring, and error tracking.
 
 Error monitoring is highly relevant to our audience.
 
-Sponsorship: $250/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested? Let's talk.
 
@@ -392,7 +404,7 @@ read by 5,000+ developers interested in LLMs, ML, and AI trends.
 
 Perfect alignment with your community.
 
-Sponsorship: $350/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Would this interest you? Happy to discuss.
 
@@ -416,7 +428,7 @@ data architecture, and backend infrastructure.
 
 PostgreSQL is frequently discussed in our "Architecture" section.
 
-Sponsorship: $250/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested? Let me know.
 
@@ -440,7 +452,7 @@ for 5,000+ developers.
 
 Your platform is relevant to many of our readers.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Worth exploring? Let's chat.
 
@@ -464,7 +476,7 @@ for 5,000+ developers learning about LLMs, AI agents, and prompt engineering.
 
 Your products are highly relevant to this audience.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested in exploring? Free to chat.
 
@@ -488,7 +500,7 @@ and DevOps for 5,000+ engineers monthly.
 
 Your tools are frequently discussed in our content.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Would you like to explore? Let me know.
 
@@ -512,7 +524,7 @@ logging, and data infrastructure.
 
 Your platform is relevant to this technical audience.
 
-Sponsorship: $300/month
+Sponsorship: $150/month (months 1-2), $200/month after, or $150/month if annual
 
 Interested? Happy to discuss this week.
 
