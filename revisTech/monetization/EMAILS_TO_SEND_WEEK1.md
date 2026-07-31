@@ -41,9 +41,9 @@ Sponsorship starts at $300/month (including logo, mention, link).
 Would this be interesting for your team? Happy to set up a quick call.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -68,9 +68,9 @@ Interest in sponsoring the "Cloud" section? ($350/month)
 Would love to discuss. Free to chat this week.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -95,9 +95,9 @@ Sponsorship options start at $300/month.
 Interested in exploring? Let me know your availability.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -122,9 +122,9 @@ Sponsorship: $350/month (logo, mention, dedicated section)
 Would you like to explore this? Happy to jump on a call.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -148,9 +148,9 @@ Sponsorship options:
 Would this interest your team? Let's talk.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -175,9 +175,9 @@ Sponsorship: $300/month
 Interested? Available for a quick call this week.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -199,9 +199,9 @@ Sponsorship: $300/month (logo + mention + link)
 Worth exploring? Let me know.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -223,9 +223,9 @@ Sponsorship: $350/month
 Interested in discussing? Let's set up a call.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -250,9 +250,9 @@ Sponsorship: $300/month
 Would you like to explore? Free to chat.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -277,9 +277,9 @@ Sponsorship: $300/month
 Interested? Happy to discuss.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -301,9 +301,9 @@ Sponsorship: $250/month
 Worth exploring? Let me know.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -325,9 +325,9 @@ Sponsorship: $300/month (logo, mention, link)
 Interested in exploring? Free to chat this week.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -349,9 +349,9 @@ Sponsorship: $300/month
 Would you like to discuss? Available for a quick call.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -373,9 +373,9 @@ Sponsorship: $250/month
 Interested? Let's talk.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -397,9 +397,9 @@ Sponsorship: $350/month
 Would this interest you? Happy to discuss.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -421,9 +421,9 @@ Sponsorship: $250/month
 Interested? Let me know.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -445,9 +445,9 @@ Sponsorship: $300/month
 Worth exploring? Let's chat.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -469,9 +469,9 @@ Sponsorship: $300/month
 Interested in exploring? Free to chat.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -493,9 +493,9 @@ Sponsorship: $300/month
 Would you like to explore? Let me know.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
@@ -517,9 +517,9 @@ Sponsorship: $300/month
 Interested? Happy to discuss this week.
 
 Best regards,
-[Your Name]
-[Your Phone]
-[Your Email]
+Juan Carlos Aguilar Herrera
++573163796360
+jaguilar0925@pearson.com
 ```
 
 ---
