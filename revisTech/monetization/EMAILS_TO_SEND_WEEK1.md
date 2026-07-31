@@ -9,22 +9,22 @@ Emails listos para copiar, personalizar (si aplica) y enviar.
 ## 📌 Before You Send
 
 **Checklist**:
-- [ ] Tu email configurado (reviTechtec@gmail.com o similar)
-- [ ] Firma profesional añadida
-- [ ] Teléfono en firma
-- [ ] Abrir tracking (opcional: https://mailtrack.io)
+- [ ] Gmail SMTP configurado (jaguilar0925@gmail.com)
+- [ ] 2FA habilitado en Gmail
+- [ ] App password generado (16 caracteres)
+- [ ] send_emails_smtp.py listo
 - [ ] Calendario para follow-ups (5-7 días después)
 
 ---
 
 ## EMAIL 1: AWS
 **To**: devrel@aws.amazon.com  
-**Subject**: Sponsor RevisTech - 5,000+ Engineers (AWS Focus)
+**Subject**: Sponsor Quantic IA Magazine - 5,000+ Engineers (AWS Focus)
 
 ```
 Hi AWS DevRel Team,
 
-I'm reaching out about a sponsorship opportunity for RevisTech, 
+I'm reaching out about a sponsorship opportunity for Quantic IA Magazine, 
 a digital magazine with 5,000+ developers, architects, and tech leads.
 
 We have a dedicated "Cloud Infrastructure" section read by engineers 
@@ -45,7 +45,7 @@ Would this be interesting for your team? Happy to set up a quick call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -54,12 +54,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 2: Google Cloud
 **To**: partnerships@google.com  
-**Subject**: Sponsorship Opportunity - RevisTech Tech Magazine
+**Subject**: Sponsorship Opportunity - Quantic IA Magazine Tech Magazine
 
 ```
 Hi Google Cloud Partnerships Team,
 
-RevisTech reaches 5,000+ engineers monthly with in-depth coverage of:
+Quantic IA Magazine reaches 5,000+ engineers monthly with in-depth coverage of:
 - Cloud infrastructure trends
 - DevOps + Kubernetes
 - Data & AI on cloud
@@ -78,7 +78,7 @@ Would love to discuss. Free to chat this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -87,12 +87,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 3: GitHub
 **To**: partnerships@github.com  
-**Subject**: RevisTech Sponsorship - 5K Developer Audience
+**Subject**: Quantic IA Magazine Sponsorship - 5K Developer Audience
 
 ```
 Hello GitHub Partnerships,
 
-RevisTech is a monthly magazine for 5,000+ developers focused on:
+Quantic IA Magazine is a monthly magazine for 5,000+ developers focused on:
 - Software development practices
 - CI/CD & DevOps
 - Architecture patterns
@@ -109,7 +109,7 @@ Interested in exploring? Let me know your availability.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -118,12 +118,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 4: JetBrains
 **To**: marketing@jetbrains.com  
-**Subject**: Sponsor RevisTech - Developer Magazine (5K Monthly)
+**Subject**: Sponsor Quantic IA Magazine - Developer Magazine (5K Monthly)
 
 ```
 Hi JetBrains Marketing,
 
-RevisTech reaches 5,000+ developers with content on:
+Quantic IA Magazine reaches 5,000+ developers with content on:
 - Software development best practices
 - Coding trends & frameworks
 - Tools & IDEs
@@ -137,7 +137,7 @@ Would you like to explore this? Happy to jump on a call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -146,12 +146,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 5: Datadog
 **To**: sales@datadooghq.com  
-**Subject**: Sponsorship Opportunity - RevisTech (Observability Audience)
+**Subject**: Sponsorship Opportunity - Quantic IA Magazine (Observability Audience)
 
 ```
 Hello Datadog Sales,
 
-RevisTech is a monthly publication for 5,000+ engineers with dedicated 
+Quantic IA Magazine is a monthly publication for 5,000+ engineers with dedicated 
 coverage of observability, monitoring, and infrastructure.
 
 Your product aligns perfectly with our audience's interests.
@@ -165,7 +165,7 @@ Would this interest your team? Let's talk.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -174,12 +174,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 6: Docker
 **To**: devrel@docker.com  
-**Subject**: RevisTech Sponsorship - 5K Developer Audience
+**Subject**: Quantic IA Magazine Sponsorship - 5K Developer Audience
 
 ```
 Hi Docker DevRel,
 
-RevisTech reaches 5,000+ developers monthly with focus on:
+Quantic IA Magazine reaches 5,000+ developers monthly with focus on:
 - Containers & microservices
 - DevOps practices
 - Cloud infrastructure
@@ -193,7 +193,7 @@ Interested? Available for a quick call this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -202,12 +202,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 7: New Relic
 **To**: sales@newrelic.com  
-**Subject**: Sponsor RevisTech - Observability Focus
+**Subject**: Sponsor Quantic IA Magazine - Observability Focus
 
 ```
 Hello New Relic Sales,
 
-RevisTech publishes monthly for 5,000+ engineers with dedicated 
+Quantic IA Magazine publishes monthly for 5,000+ engineers with dedicated 
 "Observability" and "Architecture" sections.
 
 Your solution is perfect for this audience.
@@ -218,7 +218,7 @@ Worth exploring? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -227,12 +227,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 8: Snyk
 **To**: partnerships@snyk.io  
-**Subject**: RevisTech Sponsorship - Security Audience
+**Subject**: Quantic IA Magazine Sponsorship - Security Audience
 
 ```
 Hi Snyk Partnerships,
 
-RevisTech has a dedicated "Cybersecurity" section read by 5,000+ 
+Quantic IA Magazine has a dedicated "Cybersecurity" section read by 5,000+ 
 developers focused on security best practices.
 
 Your product is highly relevant to this audience.
@@ -243,7 +243,7 @@ Interested in discussing? Let's set up a call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -252,12 +252,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 9: Cloudflare
 **To**: devrel@cloudflare.com  
-**Subject**: Sponsor RevisTech - Edge Computing & Security
+**Subject**: Sponsor Quantic IA Magazine - Edge Computing & Security
 
 ```
 Hello Cloudflare DevRel,
 
-RevisTech reaches 5,000+ engineers with coverage of:
+Quantic IA Magazine reaches 5,000+ engineers with coverage of:
 - Edge computing & CDN
 - Security & performance
 - Infrastructure optimization
@@ -271,7 +271,7 @@ Would you like to explore? Free to chat.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -280,12 +280,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 10: MongoDB
 **To**: devmarketingmonitor@mongodb.com  
-**Subject**: RevisTech Sponsorship - Database Audience
+**Subject**: Quantic IA Magazine Sponsorship - Database Audience
 
 ```
 Hi MongoDB Developer Marketing,
 
-RevisTech publishes monthly for 5,000+ developers with coverage of:
+Quantic IA Magazine publishes monthly for 5,000+ developers with coverage of:
 - Database architecture
 - NoSQL trends
 - Data management
@@ -299,7 +299,7 @@ Interested? Happy to discuss.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -308,12 +308,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 11: Auth0
 **To**: marketing@auth0.com  
-**Subject**: Sponsor RevisTech - Security & Developer Audience
+**Subject**: Sponsor Quantic IA Magazine - Security & Developer Audience
 
 ```
 Hello Auth0 Marketing,
 
-RevisTech reaches 5,000+ developers with dedicated "Cybersecurity" 
+Quantic IA Magazine reaches 5,000+ developers with dedicated "Cybersecurity" 
 and "Architecture" sections.
 
 Your identity platform is relevant to this audience.
@@ -324,7 +324,7 @@ Worth exploring? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -333,12 +333,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 12: DigitalOcean
 **To**: partnerships@digitalocean.com  
-**Subject**: RevisTech Sponsorship - Cloud Developer Magazine
+**Subject**: Quantic IA Magazine Sponsorship - Cloud Developer Magazine
 
 ```
 Hi DigitalOcean Partnerships,
 
-RevisTech has 5,000+ developers focused on cloud infrastructure, 
+Quantic IA Magazine has 5,000+ developers focused on cloud infrastructure, 
 DevOps, and scalable applications.
 
 Your audience = our readers.
@@ -349,7 +349,7 @@ Interested in exploring? Free to chat this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -358,12 +358,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 13: GitLab
 **To**: marketing@gitlab.com  
-**Subject**: Sponsor RevisTech - DevOps & Development Magazine
+**Subject**: Sponsor Quantic IA Magazine - DevOps & Development Magazine
 
 ```
 Hello GitLab Marketing,
 
-RevisTech covers software development, CI/CD, and DevOps for 
+Quantic IA Magazine covers software development, CI/CD, and DevOps for 
 5,000+ engineers monthly.
 
 Your platform is highly relevant to our audience.
@@ -374,7 +374,7 @@ Would you like to discuss? Available for a quick call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -383,12 +383,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 14: Sentry
 **To**: partnerships@sentry.io  
-**Subject**: RevisTech Sponsorship - Developer Magazine
+**Subject**: Quantic IA Magazine Sponsorship - Developer Magazine
 
 ```
 Hi Sentry Partnerships,
 
-RevisTech publishes for 5,000+ developers with focus on software 
+Quantic IA Magazine publishes for 5,000+ developers with focus on software 
 quality, monitoring, and error tracking.
 
 Error monitoring is highly relevant to our audience.
@@ -399,7 +399,7 @@ Interested? Let's talk.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -408,12 +408,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 15: Hugging Face
 **To**: partnerships@huggingface.co  
-**Subject**: RevisTech Sponsorship - AI/ML Developer Audience
+**Subject**: Quantic IA Magazine Sponsorship - AI/ML Developer Audience
 
 ```
 Hello Hugging Face Partnerships,
 
-RevisTech has a dedicated "Artificial Intelligence" section 
+Quantic IA Magazine has a dedicated "Artificial Intelligence" section 
 read by 5,000+ developers interested in LLMs, ML, and AI trends.
 
 Perfect alignment with your community.
@@ -424,7 +424,7 @@ Would this interest you? Happy to discuss.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -433,12 +433,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 16: PostgreSQL (EDB)
 **To**: sales@enterprisedb.com  
-**Subject**: RevisTech Sponsorship - Database Audience
+**Subject**: Quantic IA Magazine Sponsorship - Database Audience
 
 ```
 Hi EDB Sales,
 
-RevisTech reaches 5,000+ developers with coverage of databases, 
+Quantic IA Magazine reaches 5,000+ developers with coverage of databases, 
 data architecture, and backend infrastructure.
 
 PostgreSQL is frequently discussed in our "Architecture" section.
@@ -449,7 +449,7 @@ Interested? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -458,12 +458,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 17: Vercel
 **To**: partnerships@vercel.com  
-**Subject**: RevisTech Sponsorship - Frontend/Full-stack Developers
+**Subject**: Quantic IA Magazine Sponsorship - Frontend/Full-stack Developers
 
 ```
 Hello Vercel Partnerships,
 
-RevisTech covers development practices, frameworks, and deployment 
+Quantic IA Magazine covers development practices, frameworks, and deployment 
 for 5,000+ developers.
 
 Your platform is relevant to many of our readers.
@@ -474,7 +474,7 @@ Worth exploring? Let's chat.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -483,12 +483,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 18: Anthropic
 **To**: bd@anthropic.com  
-**Subject**: RevisTech Sponsorship - AI/LLM Developer Magazine
+**Subject**: Quantic IA Magazine Sponsorship - AI/LLM Developer Magazine
 
 ```
 Hi Anthropic Business Development,
 
-RevisTech has a dedicated "Artificial Intelligence" section 
+Quantic IA Magazine has a dedicated "Artificial Intelligence" section 
 for 5,000+ developers learning about LLMs, AI agents, and prompt engineering.
 
 Your products are highly relevant to this audience.
@@ -499,7 +499,7 @@ Interested in exploring? Free to chat.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -508,12 +508,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 19: HashiCorp
 **To**: partnerships@hashicorp.com  
-**Subject**: RevisTech Sponsorship - Infrastructure/DevOps Audience
+**Subject**: Quantic IA Magazine Sponsorship - Infrastructure/DevOps Audience
 
 ```
 Hello HashiCorp Partnerships,
 
-RevisTech covers infrastructure automation, cloud architecture, 
+Quantic IA Magazine covers infrastructure automation, cloud architecture, 
 and DevOps for 5,000+ engineers monthly.
 
 Your tools are frequently discussed in our content.
@@ -524,7 +524,7 @@ Would you like to explore? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -533,12 +533,12 @@ jaguilar0925@gmail.com
 
 ## EMAIL 20: Elastic
 **To**: marketing@elastic.co  
-**Subject**: RevisTech Sponsorship - Search & Analytics Audience
+**Subject**: Quantic IA Magazine Sponsorship - Search & Analytics Audience
 
 ```
 Hi Elastic Marketing,
 
-RevisTech reaches 5,000+ developers with coverage of search, analytics, 
+Quantic IA Magazine reaches 5,000+ developers with coverage of search, analytics, 
 logging, and data infrastructure.
 
 Your platform is relevant to this technical audience.
@@ -549,7 +549,7 @@ Interested? Happy to discuss this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
-Founder, RevisTech
+Founder, Quantic IA Magazine
 +573163796360
 jaguilar0925@gmail.com
 ```

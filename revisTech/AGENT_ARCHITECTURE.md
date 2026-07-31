@@ -1,6 +1,6 @@
-# 🤖 Arquitectura de Agentes - RevisTech
+# 🤖 Arquitectura de Agentes - Quantic IA Magazine
 
-RevisTech es una revista digital **impulsada por IA** con **supervisión humana**.
+Quantic IA Magazine es una revista digital **impulsada por IA** con **supervisión humana**.
 
 ---
 
@@ -273,7 +273,7 @@ Puede:
 **En la revista diremos:**
 
 ```
-"RevisTech es impulsada por agentes de IA especializados
+"Quantic IA Magazine es impulsada por agentes de IA especializados
 y supervisada por Juan Carlos Aguilar, Fundador.
 
 Cada artículo es investigado, redactado y revisado

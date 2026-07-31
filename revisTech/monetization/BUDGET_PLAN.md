@@ -1,6 +1,6 @@
 # 💰 Plan de Presupuesto - $50 USD
 
-Tu estrategia para monetizar RevisTech sin gastar mucho.
+Tu estrategia para monetizar Quantic IA Magazine sin gastar mucho.
 
 ---
 

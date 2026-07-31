@@ -1,6 +1,8 @@
-# RevisTech - Revista Digital de Tecnología
+# Quantic IA Magazine - Revista Digital de Tecnología
 
 Revista digital mensual especializada en tendencias y análisis profundo de tecnología, desarrollo de software, arquitectura de software, nube, inteligencia artificial y ciberseguridad.
+
+**Impulsada por Agentes de IA • Supervisada por Humanos**
 
 ## 📋 Estructura
 
@@ -90,11 +92,11 @@ Ver `automation/routines.md` para configuración completa.
 ## 📝 Guía de Contribución
 
 Para ediciones manuales:
-1. Crear rama `feature/revisTech-YYYY-MM`
+1. Crear rama `feature/quantic-ia-YYYY-MM`
 2. Editar archivos en `content/`
 3. Actualizar `template/base.html` si aplica
 4. PR con descripción de cambios
-5. Merge a main y publicar
+5. Merge a main y publicar (requiere aprobación de Juan Carlos Aguilar)
 
 ## 📞 Contacto & Info
 
