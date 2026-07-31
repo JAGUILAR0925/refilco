@@ -178,7 +178,7 @@ class EmailSender:
 
 if __name__ == '__main__':
     # CONFIGURACION
-    SENDER_EMAIL = "jaguilar0925@pearson.com"
+    SENDER_EMAIL = "jaguilar0925@gmail.com"
     APP_PASSWORD = input("Ingresa tu contraseña de app de Gmail: ")
 
     # Run
