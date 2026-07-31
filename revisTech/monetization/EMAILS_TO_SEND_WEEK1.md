@@ -45,6 +45,7 @@ Would this be interesting for your team? Happy to set up a quick call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -77,6 +78,7 @@ Would love to discuss. Free to chat this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -107,6 +109,7 @@ Interested in exploring? Let me know your availability.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -134,6 +137,7 @@ Would you like to explore this? Happy to jump on a call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -161,6 +165,7 @@ Would this interest your team? Let's talk.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -188,6 +193,7 @@ Interested? Available for a quick call this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -212,6 +218,7 @@ Worth exploring? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -236,6 +243,7 @@ Interested in discussing? Let's set up a call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -263,6 +271,7 @@ Would you like to explore? Free to chat.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -290,6 +299,7 @@ Interested? Happy to discuss.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -314,6 +324,7 @@ Worth exploring? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -338,6 +349,7 @@ Interested in exploring? Free to chat this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -362,6 +374,7 @@ Would you like to discuss? Available for a quick call.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -386,6 +399,7 @@ Interested? Let's talk.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -410,6 +424,7 @@ Would this interest you? Happy to discuss.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -434,6 +449,7 @@ Interested? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -458,6 +474,7 @@ Worth exploring? Let's chat.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -482,6 +499,7 @@ Interested in exploring? Free to chat.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -506,6 +524,7 @@ Would you like to explore? Let me know.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
@@ -530,6 +549,7 @@ Interested? Happy to discuss this week.
 
 Best regards,
 Juan Carlos Aguilar Herrera
+Founder, RevisTech
 +573163796360
 jaguilar0925@gmail.com
 ```
