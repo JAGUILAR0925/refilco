@@ -1,0 +1,42 @@
+Company,Contact Name,Email,Phone,Tier Offered,Status,Date Contacted,Follow-up Date,Interest Level,Notes,Monthly Budget,Signed,Start Date,End Date
+AWS,Sales Team,sales@aws.amazon.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Target AWS account managers in dev tools,500,,
+Google Cloud,Partnership Team,partnerships@google.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Focus on GCP infrastructure,500,,
+Microsoft Azure,Developer Advocate,advocate@microsoft.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Highlight cloud adoption audience,500,,
+DigitalOcean,Marketing,marketing@digitalocean.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Strong developer audience fit,300,,
+GitHub,Partnerships,partnerships@github.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Target developer relations team,500,,
+GitLab,Marketing,marketing@gitlab.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,DevOps + CI/CD audience,300,,
+JetBrains,Marketing,marketing@jetbrains.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Developer tools leader,500,,
+Docker,DevRel,devrel@docker.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Containers + microservices topic,300,,
+Datadog,Sales,sales@datadooghq.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Observability sponsor,500,,
+New Relic,Business Dev,biz-dev@newrelic.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Monitoring + observability,300,,
+Sentry,Marketing,marketing@sentry.io,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Error tracking for developers,250,,
+Snyk,Partnerships,partnerships@snyk.io,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Security-focused audience,500,,
+Cloudflare,Developer Relations,devrel@cloudflare.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Edge computing + security,300,,
+Kubernetes (CNCF),Marketing,marketing@cncf.io,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Infrastructure audience,300,,
+MongoDB,Developer Marketing,devmarketingmonitor@mongodb.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Database + NoSQL audience,300,,
+Redis,Marketing,marketing@redis.io,,Bronze,$150,Pending,2026-08-01,2026-08-08,0 - Not Contacted,In-memory databases,150,,
+PostgreSQL (EDB),Sales,sales@enterprisedb.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Open source database leader,250,,
+Stripe,Developer Relations,devrel@stripe.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Payment infrastructure,300,,
+Auth0,Marketing,marketing@auth0.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Identity + security,250,,
+HashiCorp,Developer Advocate,devadvocate@hashicorp.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Infrastructure automation,300,,
+Hugging Face,Partnerships,partnerships@huggingface.co,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,AI/ML + LLM focus,500,,
+OpenAI,Partnerships,partnerships@openai.com,,Gold,$400,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Premium AI/ML positioning,500,,
+Anthropic,Business Development,bd@anthropic.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,AI safety + LLM focus,500,,
+Cohere,Developer Relations,devrel@cohere.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,LLM APIs,250,,
+Langchain,Marketing,marketing@langchain.dev,,Bronze,$150,Pending,2026-08-01,2026-08-08,0 - Not Contacted,AI developer tools,150,,
+Replicate,Business Development,bd@replicate.com,,Bronze,$150,Pending,2026-08-01,2026-08-08,0 - Not Contacted,ML inference platform,150,,
+Elastic,Marketing,marketing@elastic.co,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Search + analytics,300,,
+Splunk,Sales,sales@splunk.com,,Gold,$350,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Enterprise security,500,,
+Prometheus,Community,community@prometheus.io,,Bronze,$150,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Monitoring open source,150,,
+PlanetScale,Marketing,marketing@planetscale.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,MySQL cloud database,250,,
+1Password,Business Development,business@1password.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Security + developers,250,,
+Vault (HashiCorp),Sales,sales@hashicorp.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Secret management,250,,
+Vercel,Developer Relations,devrel@vercel.com,,Silver,$300,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Frontend deployment,300,,
+Netlify,Developer Advocate,advocate@netlify.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,Modern web development,250,,
+Heroku,Marketing,marketing@heroku.com,,Silver,$250,Pending,2026-08-01,2026-08-08,0 - Not Contacted,App platform,250,,
+
+# Notes:
+# Status: Pending | Contacted | Negotiating | Closed | Rejected | On Hold
+# Interest Level: 0-Not Contacted | 1-Contacted | 2-Interested | 3-Negotiating | 4-Closed
+# Actualizar regularmente - Target: 5-10 sponsors por mes
+# Total potential: $9,700+ if all Gold/Silver adopted
